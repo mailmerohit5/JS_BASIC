@@ -1,0 +1,93 @@
+body{
+    background-color: red;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    background-color: #ffffff;
+    margin: 2rem auto;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    min-height: 90vh;
+    padding: 12px;
+    border-radius: 15px;
+}
+.btn{
+    padding: 3px;
+    background-color: red;
+    border-radius: 7px;
+    font-size: 20px;
+    outline: none;
+    color: #ffffff;
+}
+
+.btn:hover{
+    background-color: rgb(216, 97, 97);
+}
+.addForm{
+   background-color:green;
+   padding: 3px;
+   text-align: center;
+  
+}
+.addForm input{
+    height: 30px;
+    border-radius: 12px;
+}
+.tbl_records{
+    
+}
+.tbl_records tr th,.tbl_records tr td{
+    padding:3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #dddddd;
+    border: none;
+    color: #2e2e2e;
+}
+.tbl_records tr td:hover{
+    background-color: #ffffff;
+    color: #2e2e2e;
+}
+#r{
+    font-size: 10rem;
+    color: green;
+}
+.navtop{
+    display: flex;
+}
+.navtop ul{
+    display: flex;
+    list-style: none;
+}
+.navtop ul li{
+    background-color: red;
+    width: 80px;
+    margin-left: 20px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;   
+    align-items: center;   
+    border: 1px solid blue;     
+    border-top-left-radius: 12px;
+
+}
+.navtop ul li.active{
+    border-bottom: 3px solid blue;
+}
+.navtop ul li:hover{
+   
+    animation: redToBlue 0.5s ease-in-out;
+}
+@keyframes redToBlue {
+    0%{
+        background-color: red;
+    }
+    100%{
+        background-color: blue;
+    }
+}
+.navtop ul li a{
+    color: #ffffff;
+}

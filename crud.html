@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TUTORIAL</title>
+    <link rel="stylesheet" href="css/style.css">   
+    <script>
+       let books=[
+        {
+            id:1,
+            title: "My India",
+            author: "Nehru Jee",
+            price: 425.56,
+            available: false
+        },
+        {
+            id:2,
+            title: "Ind Vs Pak",
+            author: "Nehru Jee",
+            price: 425.56,
+            available: false
+        },
+        {
+            id:3,
+            title: "Sri",
+            author: "Nehru Jee",
+            price: 425.56,
+            available: false
+        },
+      
+
+
+       ];
+        function addBook(){
+           let bookCount=books.length;
+           let new_id=bookCount+1;
+           let new_title=document.querySelector('#title').value;
+           let new_author=document.querySelector('#author').value;
+           let new_price=document.querySelector('#price').value;
+           let newBook={
+               id:new_id,
+               title:new_title,
+               author:new_author,
+               price:new_price,
+               available:false
+           }
+           books.push(newBook);      // create              
+           writeTable();
+           document.querySelector('#title').value='';
+           document.querySelector('#author').value='';
+           document.querySelector('#price').value='';
+        }
+       
+        function writeTable(){
+            let iHtml=` <tr>
+                  <th>Id</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Price</th>
+                  <th>Action</th>
+              </tr>`;
+           books.forEach(book => { //read
+                      
+                      let r=`
+                      <tr>`+
+                          `<td>`+book.id+`</td>`+
+                          `<td>`+book.title+`</td>`+
+                          `<td>`+book.author+`</td>`+
+                          `<td>`+book.price+`</td>`+
+                          `<td>
+                              <a  class='btn' href="#" >Edit</a>
+                              <a  class='btn' href="#" >Delete</a>
+                          </td>`+
+                      `</tr>`;
+                iHtml=iHtml+r;
+               
+              });
+              document.querySelector('#tbl').innerHTML=iHtml;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navtop">
+            <div class="logo" style="min-width: 60%;"></div>
+            <ul>
+                <li ><a href="index.html">Home</a></li>
+                <li class="active"><a href="crud.html">Crud</a></li>
+            </ul>
+        </nav>
+       <div>
+           <h1>Book Library</h1>
+          
+            <div class="addForm">
+                <div >
+                    <input type="text" placeholder="Title"   id='title'/>
+                    <input type="text" placeholder="Author"  id='author'/>
+                    <input type="number" placeholder="Price" id='price'/>
+                    <button class="btn" onclick="addBook()">Add Book</button>
+                </div>
+               </div>
+           
+          
+          <table id="tbl" border="1" width="80%" align="center" class="tbl_records">
+             
+          </table>
+          <script>
+               writeTable();
+          </script>
+       </div>
+    </div>
+   
+</body>
+
+</html>

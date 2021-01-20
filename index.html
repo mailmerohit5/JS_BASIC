@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TUTORIAL</title>
+    <link rel="stylesheet" href="css/style.css">   
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navtop">
+            <div class="logo" style="min-width: 60%;"></div>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="crud.html">Crud</a></li>
+            </ul>
+        </nav>
+        <input type="text" placeholder="First Num" id='fno' />
+        <input type="text" placeholder="Second Num" id='sno' />
+        <button class="btn" onclick="showSum()">
+            Sum
+        </button>
+        <p id="r"></p>
+    </div>
+    <script>
+        function sum(n1, n2) {
+            //let , var
+            let num1 = parseInt(n1);
+            let num2 = parseInt(n2);
+            let sum = num1 + num2;
+            return sum;
+        }
+        function showSum(){
+           let result= sum(document.querySelector('#fno').value,document.querySelector('#sno').value);
+           document.querySelector('#r').innerHTML= " Sum is " + result;
+        }
+      // sum(3,10);
+    </script>
+</body>
+
+</html>
