@@ -1,5 +1,6 @@
 body{
     background-color: red;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -22,15 +23,18 @@ a{
     color: #ffffff;
 }
 
-.btn:hover{
+.btn:hover,.btn:active,.btn:focus{
     background-color: rgb(216, 97, 97);
+    outline: none;
 }
+
 .addForm{
    background-color:green;
    padding: 3px;
    text-align: center;
-  
+   
 }
+
 .addForm input{
     height: 30px;
     border-radius: 12px;
@@ -90,4 +94,65 @@ a{
 }
 .navtop ul li a{
     color: #ffffff;
+}
+
+/******Dialogs***********/
+.showMyAlert{
+display: block !important;
+}
+.myAlert{
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    
+}
+.myAlert .alert{
+    position: absolute;
+    top:40%;
+    left: 40%;
+    z-index: 100;    
+    border: 2px solid #2e2e2e;
+    border-radius: 12px;
+    height: 120px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0.5px 1.5px;
+    background-color: #f3e8e8;
+    color: #e47474;
+    padding-top: 10px;
+}
+.myAlert .alert .close{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    height: 10px;
+    width: 10px;
+    font-size: 8px;
+    background-color: #2e2e2e;
+    color: #dddddd;
+    padding: 5px;
+    border:1px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.myAlert .alert #msg{
+    font-size: 1.2em;
+    font-weight: 700;
+    font-style: italic;
+    max-width: 80%;
+    
+}
+
+@media only screen and (max-width: 910px) {
+body{
+   
+}
+.navtop{
+    flex-direction: column;
+}
+
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TUTORIAL</title>
+    <link rel="stylesheet" href="css/style.css">   
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navtop">
+            <div class="logo" style="min-width: 60%;"></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crud.html">Crud</a></li>
+                <li  class="active"><a href="dialog.html">Dialog</a></li>
+            </ul>
+        </nav>
+        <div>
+            <p><button class="btn" onclick="myAlert('My name is not khan')">My alert</button></p>
+            <p><button class="btn">My confirm</button></p>
+            <p><button class="btn">Other Dialog</button></p>
+        </div>
+    </div>
+   <div class="myAlert" id="myAlert">
+    <div class="alert">   
+        <div id="alertClose" class="close">
+            X
+        </div> 
+        <div id="msg"></div>
+              
+    </div>
+   </div> 
+   <script src="js/dialog.js"></script>
+</body>
+
+</html>

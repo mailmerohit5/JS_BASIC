@@ -16,6 +16,7 @@
             <ul>
                 <li ><a href="index.html">Home</a></li>
                 <li class="active"><a href="crud.html">Crud</a></li>
+                <li><a href="dialog.html">Dialog</a></li>
             </ul>
         </nav>
        <div>
@@ -26,8 +27,9 @@
                     <input type="text" placeholder="Title"   id='title'/>
                     <input type="text" placeholder="Author"  id='author'/>
                     <input type="number" placeholder="Price" id='price'/>
-                    <button class="btn" onclick="addOrEdit()">Add Book</button>
+                    
                 </div>
+                <button class="btn" onclick="addOrEdit()">Add Book</button>
                </div>
            
           
@@ -37,10 +39,19 @@
             <button class="btn" onclick="deleteAll()">Delete All</button>
           </div>
           <script src="js/crud.js"></script>
+          <script src="js/dialog.js"></script>
          
        </div>
     </div>
-   
+    <div class="myAlert" id="myAlert">
+        <div class="alert">   
+            <div id="alertClose" class="close">
+                X
+            </div> 
+            <div id="msg"></div>
+                  
+        </div>
+       </div> 
 </body>
 
 </html>
